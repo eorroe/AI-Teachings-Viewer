@@ -149,6 +149,31 @@ const fuzzyMatch = (query, text) => {
     return queryIndex === lowerQuery.length;
 };
 
+const sortFiles = (files) => {
+    const numbered = [];
+    const unnumbered = [];
+
+    for (const file of files) {
+        const name = getDisplayName(file.name);
+        if (/^\d+/.test(name)) {
+            numbered.push(file);
+        } else {
+            unnumbered.push(file);
+        }
+    }
+
+    const sortFn = (a, b) => {
+        const nameA = getDisplayName(a.name).toLowerCase();
+        const nameB = getDisplayName(b.name).toLowerCase();
+        return nameA.localeCompare(nameB, undefined, { numeric: true, sensitivity: 'base' });
+    };
+
+    numbered.sort(sortFn);
+    unnumbered.sort(sortFn);
+
+    return [...numbered, ...unnumbered];
+};
+
 const renderSearchInput = (placeholder, id) => {
     return `
         <div class="search-container">
@@ -520,7 +545,7 @@ const renderFolders = (folders, path) => {
 };
 
 const renderFiles = (files, path) => {
-    const markdownFiles = files.filter((file) => isMarkdownFile(file.name));
+    const markdownFiles = sortFiles(files.filter((file) => isMarkdownFile(file.name)));
     currentFiles = markdownFiles;
 
     if (markdownFiles.length === 0) {
@@ -745,7 +770,7 @@ const loadRootDirectories = async (skipCache = false) => {
     try {
         const sources = await getCachedSourcesList(skipCache);
         const allTeachings = await getCachedTeachingIndex(skipCache);
-        currentFiles = allTeachings;
+        currentFiles = sortFiles(allTeachings);
 
         if (sources.length === 0) {
             hideLoading();
@@ -790,7 +815,7 @@ const loadTeachings = async (path, skipCache = false) => {
     try {
         const allTeachings = await getCachedTeachingIndex(skipCache);
         const prefix = `${path}/`;
-        const files = allTeachings.filter(teaching => teaching.path.startsWith(prefix));
+        const files = sortFiles(allTeachings.filter(teaching => teaching.path.startsWith(prefix)));
 
         hideLoading();
 

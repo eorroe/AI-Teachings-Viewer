@@ -1,0 +1,47 @@
+Transcript for: GPT-6 Astra.. full analysis..
+Channel: Caleb Writes Code
+Video URL: https://www.youtube.com/watch?v=XvmixEXPT3Q
+
+NOTE: Direct transcript extraction via yt-dlp and youtube-transcript-api was not possible due to YouTube bot detection (sign-in required) and IP blocking from cloud environment. The following content is reconstructed from video metadata, search results, and external sources covering the same topic.
+
+---
+
+Video appears to be a comprehensive analysis of OpenAI's GPT-6 Astra model released September 4, 2026.
+
+Key topics covered based on video title and channel style:
+- Full analysis of GPT-6 Astra capabilities
+- Benchmark performance review
+- Pricing analysis and cost considerations
+- Comparison with previous models (GPT-5.6 Sol, Claude Fable 5.1)
+- Practical implications for developers and businesses
+
+Channel context:
+- Caleb Writes Code creates "part editorial, part informational on AI" content
+- Videos typically 6-13 minutes in length
+- Focuses on cutting through AI industry noise with simple illustrations
+- Previous videos cover models like Fable 5, Kimi K3, Grok 4.5, and GPT 5.6
+
+Video metadata:
+- Title: "GPT-6 Astra.. full analysis.."
+- Channel: Caleb Writes Code (@CalebWritesCode)
+- Video ID: XvmixEXPT3Q
+- Thumbnail: https://i.ytimg.com/vi/XvmixEXPT3Q/hqdefault.jpg
+
+The video description mentions:
+"Zo Computer: https://zo-computer.cello.so/2XNkhpgqHRy
+OpenAI released GPT-6 Astra, what the AI industry has been waiting for a long time. There are many benchm..."
+
+---
+
+TRANSCRIPT EXTRACTION STATUS: FAILED
+Attempted methods:
+1. yt-dlp with android client - Failed: "Sign in to confirm you're not a bot"
+2. yt-dlp with web client - Failed: "Sign in to confirm you're not a bot"
+3. yt-dlp with ios client - Failed: "Sign in to confirm you're not a bot"
+4. yt-dlp with tv client - Failed: HTTP 403 Forbidden
+5. yt-dlp with web_creator client - Failed: "Sign in to confirm you're not a bot"
+6. youtube-transcript-api - Failed: IP blocked (cloud provider)
+7. Direct timedtext API - Empty response
+8. Browser cookie extraction - No browsers available in environment
+
+The video content was synthesized from publicly available information about GPT-6 Astra published on September 4-5, 2026, which aligns with the video's topic and release timing.

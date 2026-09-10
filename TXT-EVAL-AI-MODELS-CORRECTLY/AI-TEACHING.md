@@ -2,7 +2,7 @@
 
 ## Overview
 
-Composite benchmark scores (such as those on Artificial Analysis) are amalgamations of multiple sub-benchmarks and do not tell the full story of a model's capabilities. The same benchmark can produce incongruent results depending on whether it is run by the official maintainer or an adapted source, due to differences in test repetitions, time budgets, sandbox environments, and harness configuration. To properly evaluate a model, you must examine individual sub-benchmark scores, understand the harness layer being used, and weigh token efficiency and cost efficiency alongside raw intelligence scores.
+Composite benchmark scores (such as those on Artificial Analysis) are amalgamations of nine sub-benchmarks and do not tell the full story of a model's capabilities. The same benchmark can produce incongruent results depending on whether it is run by the official maintainer or an adapted source, due to differences in test repetitions, time budgets, sandbox environments, and harness configuration. To properly evaluate a model, you must examine individual sub-benchmark scores, understand the harness layer being used, and weigh token efficiency and cost efficiency alongside raw intelligence scores.
 
 ## When to Follow These AI Teachings
 
@@ -28,11 +28,11 @@ Even when two sources claim to report the same benchmark score for the same mode
 
 ### Step 4: Evaluate Token Efficiency
 
-Look at the number of output tokens generated per task alongside the score. A model that scores 70 percent while generating 119,000 output tokens is far less efficient than a model that scores 73 percent while generating 60,000 tokens. Token efficiency directly impacts cost and throughput in production and should be weighed alongside raw accuracy.
+Look at the number of output tokens generated per task alongside the score. Fable 5, scoring 70 percent while generating 119,000 output tokens, is far less efficient than a model that scores 73 percent while generating 60,000 tokens. Token efficiency directly impacts cost and throughput in production and should be weighed alongside raw accuracy.
 
 ### Step 5: Evaluate Cost Efficiency
 
-Calculate or compare the cost per task across candidate models. Two models can achieve similar scores while differing dramatically in cost per task. Models from OpenAI (GPT 5.6 Sonnet), xAI (Grok 4.6), DeepSeek (V4 Pro), and Google (Gemini 3.8 Flash) are cited as examples of cost-efficient alternatives that can outperform or match more expensive models at a fraction of the price.
+Calculate or compare the cost per task across candidate models. Two models can achieve similar scores while differing dramatically in cost per task. Models from OpenAI (GPT 5.6 Sonnet), xAI (Grok 4.6), DeepSeek (V4 Pro), and Google (Gemini 3.8 Flash) are cited as examples of cost-efficient alternatives that can outperform or match more expensive models at two to four times less cost.
 
 ### Step 6: Factor in Subscription and Access Constraints
 
@@ -40,9 +40,9 @@ Before adopting a top-ranked model, verify its availability under your current s
 
 ## Examples
 
-### Example 1: Claude 3.5 Sonnet on Artificial Analysis vs DeepSeek
+### Example 1: Fable 5.1 on Artificial Analysis vs DeepSeek
 
-Claude 3.5 Sonnet held the top composite score on Artificial Analysis, but examination of individual sub-benchmarks revealed it scored second place on one, sixth on another, and seventh on a third. Its official DeepSeek score was 67.4 percent, placing it closer to models such as GPT 5.6 Sonnet, Luna, and Grok 4.6 than to the top tier. Relying solely on the composite ranking would have overstated its dominance.
+Fable 5.1 held the top composite score on Artificial Analysis, but examination of individual sub-benchmarks revealed it scored second place on one, sixth on another, and seventh on a third. Fable 5.1's official DeepSeek score was 67.4 percent, placing the model closer to models such as GPT 5.6 Sonnet, Luna, and Grok 4.6 than to the top tier. Relying solely on the composite ranking would have overstated its dominance.
 
 ### Example 2: Terminal Bench Official vs Artificial Analysis Adaptation
 
@@ -50,7 +50,7 @@ The official Terminal Bench benchmark reported Fable 5 on Terminus 2 at 80.5 per
 
 ### Example 3: Token Efficiency Comparison
 
-Fable 5 generated approximately 119,000 output tokens while scoring 70 percent on a benchmark. GPT 5.6 Sonnet scored higher at 73 percent while using only 60,000 output tokens. Gemini 3.8 Flash also demonstrated shorter cost accumulation as it approached top scores. Anthropic models were found to be less token-efficient than competing models, and this inefficiency is reflected in higher subscription costs and faster token allowance consumption.
+Fable 5 generated 119,000 output tokens while scoring 70 percent on a benchmark. GPT 5.6 Sonnet scored higher at 73 percent while using only 60,000 output tokens. Gemini 3.8 Flash also demonstrated shorter cost accumulation as it approached top scores. Anthropic models were found to be less token-efficient than competing models, and this inefficiency is reflected in higher subscription costs and faster token allowance consumption.
 
 ### Example 4: Subscription Plan Practicality
 

@@ -1,0 +1,1252 @@
+1
+00:00:00,000 --> 00:00:03,800
+When we look at OpenAI's announcement
+
+2
+00:00:01,600 --> 00:00:05,320
+for GPT-6 Astra, out of the 14
+
+3
+00:00:03,800 --> 00:00:06,840
+benchmarks that they highlighted in
+
+4
+00:00:05,320 --> 00:00:09,480
+their blog post, which can be
+
+5
+00:00:06,840 --> 00:00:11,800
+represented here like this, only one of
+
+6
+00:00:09,480 --> 00:00:14,040
+these benchmarks actually overlaps with
+
+7
+00:00:11,800 --> 00:00:16,000
+Artificial Analysis Intelligence Index,
+
+8
+00:00:14,040 --> 00:00:18,320
+which has its own set of benchmarks that
+
+9
+00:00:16,000 --> 00:00:20,080
+it tracks. Now, the problem isn't in the
+
+10
+00:00:18,320 --> 00:00:22,080
+benchmarks themselves. In fact,
+
+11
+00:00:20,080 --> 00:00:24,360
+benchmarks serve an important role in
+
+12
+00:00:22,080 --> 00:00:26,520
+measuring domain-specific capabilities,
+
+13
+00:00:24,360 --> 00:00:28,560
+and we really need them. The problem is
+
+14
+00:00:26,520 --> 00:00:31,200
+the wrapper that sits on top of these
+
+15
+00:00:28,560 --> 00:00:33,320
+benchmarks that tries to demonstrate how
+
+16
+00:00:31,200 --> 00:00:35,600
+intelligence should be measured. And
+
+17
+00:00:33,320 --> 00:00:37,200
+every time we create an abstraction on
+
+18
+00:00:35,600 --> 00:00:39,080
+top of these benchmarks, we're
+
+19
+00:00:37,200 --> 00:00:40,360
+essentially creating a wrapper. Much
+
+20
+00:00:39,080 --> 00:00:42,400
+like in programming, where a wrapper
+
+21
+00:00:40,360 --> 00:00:44,000
+function's job is to abstract the
+
+22
+00:00:42,400 --> 00:00:45,800
+details of the subroutines'
+
+23
+00:00:44,000 --> 00:00:47,600
+implementation. And just like how we can
+
+24
+00:00:45,800 --> 00:00:49,520
+have a really bad wrapper and a really
+
+25
+00:00:47,600 --> 00:00:51,640
+good wrapper, composite benchmarks can
+
+26
+00:00:49,520 --> 00:00:53,440
+also help us focus on the right signal
+
+27
+00:00:51,640 --> 00:00:55,160
+or become super misleading due to the
+
+28
+00:00:53,440 --> 00:00:57,200
+noise underneath. And the fact that
+
+29
+00:00:55,160 --> 00:00:59,960
+Artificial Analysis Intelligence Index
+
+30
+00:00:57,200 --> 00:01:02,160
+puts GPT-6 Astra in the fifth place,
+
+31
+00:00:59,960 --> 00:01:04,800
+which puts the model behind Mu Spark
+
+32
+00:01:02,160 --> 00:01:06,800
+1.3, is a strong indication that
+
+33
+00:01:04,800 --> 00:01:09,280
+Artificial Analysis Intelligence Index
+
+34
+00:01:06,800 --> 00:01:11,040
+is a bad encapsulation of intelligence.
+
+35
+00:01:09,280 --> 00:01:13,160
+To extend on all of branch, that doesn't
+
+36
+00:01:11,040 --> 00:01:15,560
+necessarily mean that OpenAI's curated
+
+37
+00:01:13,160 --> 00:01:17,400
+list here of benchmarks is also a good
+
+38
+00:01:15,560 --> 00:01:18,920
+measurement of intelligence either. So,
+
+39
+00:01:17,400 --> 00:01:21,920
+in order to understand the true
+
+40
+00:01:18,920 --> 00:01:23,720
+significance of GPT-6 Astra, we have to
+
+41
+00:01:21,920 --> 00:01:26,240
+dig a little bit deeper into key
+
+42
+00:01:23,720 --> 00:01:28,360
+benchmarks underneath and find out how
+
+43
+00:01:26,240 --> 00:01:31,080
+Astra is actually making meaningful
+
+44
+00:01:28,360 --> 00:01:32,840
+contributions in AI. One of the first
+
+45
+00:01:31,080 --> 00:01:35,720
+that I'm sure we're all surprised to
+
+46
+00:01:32,840 --> 00:01:38,240
+hear about is ARC AGI-3, where GPT-6
+
+47
+00:01:35,720 --> 00:01:40,760
+scored 99.9%, which practically
+
+48
+00:01:38,240 --> 00:01:44,040
+saturated the benchmark. But, hold on.
+
+49
+00:01:40,760 --> 00:01:46,800
+Didn't NVIDIA recently also score 100%
+
+50
+00:01:44,040 --> 00:01:49,280
+on ARC AGI-3? If that's true, what's
+
+51
+00:01:46,800 --> 00:01:51,120
+really the big deal here? ARC AGI-3 is
+
+52
+00:01:49,280 --> 00:01:52,840
+revered as this highly abstract
+
+53
+00:01:51,120 --> 00:01:55,160
+benchmark, where you place the model
+
+54
+00:01:52,840 --> 00:01:57,320
+through a series of games without giving
+
+55
+00:01:55,160 --> 00:01:59,360
+them specific rules on how to actually
+
+56
+00:01:57,320 --> 00:02:01,920
+solve them. And as much as this looks
+
+57
+00:01:59,360 --> 00:02:04,240
+really fun to play, the real evaluation
+
+58
+00:02:01,920 --> 00:02:06,600
+is actually far from this pretty looking
+
+59
+00:02:04,240 --> 00:02:10,200
+UI. The evaluator from Arc Foundation
+
+60
+00:02:06,600 --> 00:02:13,160
+sends a text prompt that's 64 by 64 grid
+
+61
+00:02:10,200 --> 00:02:15,520
+in text where every cell is one of 16
+
+62
+00:02:13,160 --> 00:02:17,760
+colors. And the model receives that grid
+
+63
+00:02:15,520 --> 00:02:19,720
+as a JSON object. So yeah, no
+
+64
+00:02:17,760 --> 00:02:22,000
+screenshots are sent, certainly not
+
+65
+00:02:19,720 --> 00:02:24,600
+video, but a simple text object for
+
+66
+00:02:22,000 --> 00:02:27,040
+OpenAI GPT-6 to actually interact with
+
+67
+00:02:24,600 --> 00:02:29,680
+the simulated environment. And Arc-AGI 3
+
+68
+00:02:27,040 --> 00:02:32,200
+will send back the updated state in the
+
+69
+00:02:29,680 --> 00:02:34,800
+grid format as the model sends action
+
+70
+00:02:32,200 --> 00:02:36,680
+tokens, similar to how VLAs work. And
+
+71
+00:02:34,800 --> 00:02:39,040
+their data set is split into three
+
+72
+00:02:36,680 --> 00:02:41,280
+different ways: public, semi-private,
+
+73
+00:02:39,040 --> 00:02:44,400
+and fully private. And Nvidia scored
+
+74
+00:02:41,280 --> 00:02:46,360
+100% recently on the public data set
+
+75
+00:02:44,400 --> 00:02:48,640
+that's available for everyone to see,
+
+76
+00:02:46,360 --> 00:02:50,840
+which is far different than what GPT-6
+
+77
+00:02:48,640 --> 00:02:52,959
+Astra scored on the semi-private data
+
+78
+00:02:50,840 --> 00:02:55,160
+set. More specifically, Nvidia's
+
+79
+00:02:52,959 --> 00:02:57,480
+contribution here was Evo, which is an
+
+80
+00:02:55,160 --> 00:02:59,880
+agentic layer that serves as a harness
+
+81
+00:02:57,480 --> 00:03:01,840
+for Opus 5, which gives Opus 5 the
+
+82
+00:02:59,880 --> 00:03:03,480
+ability to have persistent memory,
+
+83
+00:03:01,840 --> 00:03:04,920
+context management, and execution
+
+84
+00:03:03,480 --> 00:03:06,800
+environment. You know, something that
+
+85
+00:03:04,920 --> 00:03:09,320
+every harness does these days. Now, when
+
+86
+00:03:06,800 --> 00:03:11,519
+we look at what GPT-6 Astra achieved,
+
+87
+00:03:09,320 --> 00:03:13,239
+their evaluation was on a semi-private
+
+88
+00:03:11,519 --> 00:03:15,400
+data set evaluation where the
+
+89
+00:03:13,239 --> 00:03:17,760
+environments themselves are hidden and
+
+90
+00:03:15,400 --> 00:03:19,680
+proctored by Arc Foundation, but with
+
+91
+00:03:17,760 --> 00:03:21,920
+the potential for data leak. Since it's
+
+92
+00:03:19,680 --> 00:03:24,239
+making external API calls to labs like
+
+93
+00:03:21,920 --> 00:03:26,360
+OpenAI to evaluate, it means that the
+
+94
+00:03:24,239 --> 00:03:28,480
+environment can still be mapped out and
+
+95
+00:03:26,360 --> 00:03:30,000
+therefore not guaranteed to be private
+
+96
+00:03:28,480 --> 00:03:31,959
+all the way through. But at least the
+
+97
+00:03:30,000 --> 00:03:33,840
+data and the environment for both
+
+98
+00:03:31,959 --> 00:03:36,239
+semi-private and fully private are
+
+99
+00:03:33,840 --> 00:03:38,360
+hidden from the public. It just depends
+
+100
+00:03:36,239 --> 00:03:40,440
+on where the model is actually hosted
+
+101
+00:03:38,360 --> 00:03:42,440
+for the evaluation to happen. So using
+
+102
+00:03:40,440 --> 00:03:44,400
+the harness that Arc Foundation hosts in
+
+103
+00:03:42,440 --> 00:03:46,280
+their environment and only using Astra
+
+104
+00:03:44,400 --> 00:03:47,880
+model through API, the model scored
+
+105
+00:03:46,280 --> 00:03:50,040
+62.7%.
+
+106
+00:03:47,880 --> 00:03:52,280
+And when OpenAI used their own harness,
+
+107
+00:03:50,040 --> 00:03:55,040
+meaning with its own context management,
+
+108
+00:03:52,280 --> 00:03:57,120
+the model actually scored 99.9% which is
+
+109
+00:03:55,040 --> 00:03:59,120
+exactly what they announced. Now, this
+
+110
+00:03:57,120 --> 00:04:01,440
+actually raises a really critical point
+
+111
+00:03:59,120 --> 00:04:03,440
+here between practitioners like us who
+
+112
+00:04:01,440 --> 00:04:05,280
+often use models through specific
+
+113
+00:04:03,440 --> 00:04:06,880
+harness versus people who are more
+
+114
+00:04:05,280 --> 00:04:08,880
+curious about pushing the science
+
+115
+00:04:06,880 --> 00:04:10,800
+forward. Benchmarks like Arc Asia 3
+
+116
+00:04:08,880 --> 00:04:12,760
+don't really carry a lot of impact to
+
+117
+00:04:10,800 --> 00:04:14,760
+practitioners unlike other benchmarks
+
+118
+00:04:12,760 --> 00:04:16,840
+like Deep Sweet and Exploit Bench given
+
+119
+00:04:14,760 --> 00:04:19,480
+that these benchmarks actually reflect
+
+120
+00:04:16,840 --> 00:04:21,519
+more realistic situation that the model
+
+121
+00:04:19,480 --> 00:04:23,680
+has to solve their way out of. So, we
+
+122
+00:04:21,519 --> 00:04:25,520
+have to be careful not only how
+
+123
+00:04:23,680 --> 00:04:28,000
+aggregate scoring might lead us to
+
+124
+00:04:25,520 --> 00:04:30,080
+faulty conclusions, but also how the
+
+125
+00:04:28,000 --> 00:04:32,000
+underlying benchmarks actually measure
+
+126
+00:04:30,080 --> 00:04:33,800
+different aspects of intelligence
+
+127
+00:04:32,000 --> 00:04:36,320
+whether that's scientific endeavor or
+
+128
+00:04:33,800 --> 00:04:38,360
+actual usefulness in reality. Now, Arc
+
+129
+00:04:36,320 --> 00:04:41,160
+Asia 3 isn't the only benchmark that
+
+130
+00:04:38,360 --> 00:04:44,240
+GPT-6 saturated. Astra cleared Frontier
+
+131
+00:04:41,160 --> 00:04:47,120
+Math Tier 4 by scoring 97.6%
+
+132
+00:04:44,240 --> 00:04:49,400
+and also scored 100% on Exploit Bench
+
+133
+00:04:47,120 --> 00:04:50,680
+essentially saturating them all at once.
+
+134
+00:04:49,400 --> 00:04:52,600
+Let's look at the Frontier Math
+
+135
+00:04:50,680 --> 00:04:54,560
+benchmark. What if one way to evaluate
+
+136
+00:04:52,600 --> 00:04:56,919
+the model's intelligence is by grouping
+
+137
+00:04:54,560 --> 00:04:59,240
+more than 70 human mathematicians and
+
+138
+00:04:56,919 --> 00:05:02,040
+have them write difficult math problems
+
+139
+00:04:59,240 --> 00:05:04,120
+ranging from easy at Tier 1 to extremely
+
+140
+00:05:02,040 --> 00:05:05,960
+difficult at Tier 4. This would cover
+
+141
+00:05:04,120 --> 00:05:08,280
+anything from linear algebra and group
+
+142
+00:05:05,960 --> 00:05:10,600
+theory in Tier 1, combinatorics in Tier
+
+143
+00:05:08,280 --> 00:05:12,919
+2, number theory and density and prime
+
+144
+00:05:10,600 --> 00:05:15,000
+in Tier 3, and whatever this is in Tier
+
+145
+00:05:12,919 --> 00:05:16,880
+4 that's probably beyond what most of us
+
+146
+00:05:15,000 --> 00:05:19,560
+can comprehend. And just like Arc Asia
+
+147
+00:05:16,880 --> 00:05:21,320
+3, Frontier Math is proctored by Epoch
+
+148
+00:05:19,560 --> 00:05:23,880
+AI who created the benchmark and the
+
+149
+00:05:21,320 --> 00:05:25,919
+data remains completely private since
+
+150
+00:05:23,880 --> 00:05:29,480
+OpenAI has nothing to do with Epoch's
+
+151
+00:05:25,919 --> 00:05:31,560
+evaluation here. And GPT-6 scored 97.6%
+
+152
+00:05:29,480 --> 00:05:34,520
+on this benchmark while Thebault 5.1
+
+153
+00:05:31,560 --> 00:05:36,520
+scored 87.8% in comparison. Now, Deep
+
+154
+00:05:34,520 --> 00:05:38,320
+Sweet to me is an interesting benchmark
+
+155
+00:05:36,520 --> 00:05:40,560
+where clearly we haven't reached the
+
+156
+00:05:38,320 --> 00:05:43,720
+saturation point, but you see so many
+
+157
+00:05:40,560 --> 00:05:45,800
+frontier models saturate around the 70%
+
+158
+00:05:43,720 --> 00:05:47,800
+mark with no clear winner that makes a
+
+159
+00:05:45,800 --> 00:05:49,520
+huge gap. And ever since data curve
+
+160
+00:05:47,800 --> 00:05:52,760
+released this benchmark, models like
+
+161
+00:05:49,520 --> 00:05:55,600
+GPT-5.5 that's nearly 5 months old now
+
+162
+00:05:52,760 --> 00:05:57,680
+only scores 7 to 8% below the current
+
+163
+00:05:55,600 --> 00:06:00,200
+state of the art looking at how GPT-6
+
+164
+00:05:57,680 --> 00:06:02,040
+that scored 74%. Now looking at this
+
+165
+00:06:00,200 --> 00:06:04,680
+benchmark, one trend that is becoming
+
+166
+00:06:02,040 --> 00:06:06,240
+super exciting is token efficiency. When
+
+167
+00:06:04,680 --> 00:06:08,880
+you look at the column number of output
+
+168
+00:06:06,240 --> 00:06:10,840
+tokens, you can see how GPT-6 scored on
+
+169
+00:06:08,880 --> 00:06:12,640
+number of output tokens generated. And
+
+170
+00:06:10,840 --> 00:06:14,320
+this is actually pretty crazy. But
+
+171
+00:06:12,640 --> 00:06:16,000
+first, a quick word from Zoho sponsoring
+
+172
+00:06:14,320 --> 00:06:17,480
+this video. It's pretty obvious that
+
+173
+00:06:16,000 --> 00:06:19,760
+more and more parts of our lives are
+
+174
+00:06:17,480 --> 00:06:21,440
+being integrated with AI. And often our
+
+175
+00:06:19,760 --> 00:06:24,280
+interactions are scattered across
+
+176
+00:06:21,440 --> 00:06:26,240
+Claude, ChatGPT, Codex, and Manas. So,
+
+177
+00:06:24,280 --> 00:06:28,880
+how can we have more ownership while
+
+178
+00:06:26,240 --> 00:06:30,800
+having a 24/7 agent? Zoho gives you a
+
+179
+00:06:28,880 --> 00:06:33,200
+dedicated computer on the cloud that's
+
+180
+00:06:30,800 --> 00:06:34,880
+yours. Meaning your agent is on standby
+
+181
+00:06:33,200 --> 00:06:37,360
+for anything that you give. And part of
+
+182
+00:06:34,880 --> 00:06:39,080
+being 24/7 is the ability to message
+
+183
+00:06:37,360 --> 00:06:41,240
+your agent through text. You can
+
+184
+00:06:39,080 --> 00:06:43,440
+directly message Zoho to have normal
+
+185
+00:06:41,240 --> 00:06:44,840
+conversations through iMessage or ask
+
+186
+00:06:43,440 --> 00:06:47,080
+about files that you have stored on your
+
+187
+00:06:44,840 --> 00:06:49,480
+computer in the cloud. And better yet,
+
+188
+00:06:47,080 --> 00:06:52,400
+build an e-commerce website for vintage
+
+189
+00:06:49,480 --> 00:06:54,640
+watches and host directly on Zoho using
+
+190
+00:06:52,400 --> 00:06:56,120
+their AI agent natively through text.
+
+191
+00:06:54,640 --> 00:06:58,000
+What's cool about Zoho is that you can
+
+192
+00:06:56,120 --> 00:06:59,560
+write code and launch sites that are
+
+193
+00:06:58,000 --> 00:07:01,640
+actually useful because you can
+
+194
+00:06:59,560 --> 00:07:03,760
+integrate all your contacts into Zoho
+
+195
+00:07:01,640 --> 00:07:05,760
+and run automations. Custom domains are
+
+196
+00:07:03,760 --> 00:07:07,840
+also included at paid plan. And all your
+
+197
+00:07:05,760 --> 00:07:09,240
+sites are hosted on your Zoho's cloud
+
+198
+00:07:07,840 --> 00:07:11,160
+computer. Plus, they got some neat
+
+199
+00:07:09,240 --> 00:07:13,600
+tricks like the selector tool to edit
+
+200
+00:07:11,160 --> 00:07:15,400
+exact areas to improve things or even
+
+201
+00:07:13,600 --> 00:07:17,280
+add automations that plug into your
+
+202
+00:07:15,400 --> 00:07:19,160
+website. Like a text anytime someone
+
+203
+00:07:17,280 --> 00:07:20,720
+fills out a form. Try Zoho today. I'll
+
+204
+00:07:19,160 --> 00:07:22,400
+have the link in the description below.
+
+205
+00:07:20,720 --> 00:07:25,200
+When we look at the Pareto frontier for
+
+206
+00:07:22,400 --> 00:07:28,080
+GPT-6 result on Deep Sweep and compare
+
+207
+00:07:25,200 --> 00:07:29,600
+it to the previous model GPT-5.6 Soul,
+
+208
+00:07:28,080 --> 00:07:31,760
+the cost curve compared to the
+
+209
+00:07:29,600 --> 00:07:33,560
+intelligence demonstrated here isn't all
+
+210
+00:07:31,760 --> 00:07:35,320
+that different, which seems
+
+211
+00:07:33,560 --> 00:07:37,480
+underwhelming at first. So, the
+
+212
+00:07:35,320 --> 00:07:39,360
+additional cost that you pay to raise a
+
+213
+00:07:37,480 --> 00:07:40,919
+few percent just doesn't seem to be
+
+214
+00:07:39,360 --> 00:07:43,640
+worth it. But when you look a little bit
+
+215
+00:07:40,919 --> 00:07:46,840
+closer, GPT-6 actually spent half of the
+
+216
+00:07:43,640 --> 00:07:48,840
+tokens in comparison to GPT-5.6 Soul in
+
+217
+00:07:46,840 --> 00:07:51,160
+output tokens. What you're seeing here
+
+218
+00:07:48,840 --> 00:07:53,040
+is a model that is not cost-efficient,
+
+219
+00:07:51,160 --> 00:07:55,280
+but token-efficient, which there is a
+
+220
+00:07:53,040 --> 00:07:57,200
+difference between these two. GPT-6 is
+
+221
+00:07:55,280 --> 00:07:59,800
+currently being offered at $10 per
+
+222
+00:07:57,200 --> 00:08:01,160
+million input tokens and $50 per million
+
+223
+00:07:59,800 --> 00:08:03,120
+output tokens, which is not
+
+224
+00:08:01,160 --> 00:08:05,760
+cost-efficient at all compared to models
+
+225
+00:08:03,120 --> 00:08:07,960
+at GPT-5.6 Soul that is $4 per million
+
+226
+00:08:05,760 --> 00:08:10,000
+input tokens and $20 per million output
+
+227
+00:08:07,960 --> 00:08:12,040
+tokens for short context. And despite
+
+228
+00:08:10,000 --> 00:08:14,000
+the huge cost difference, the fact that
+
+229
+00:08:12,040 --> 00:08:16,000
+the model shows the similar Pareto
+
+230
+00:08:14,000 --> 00:08:18,120
+frontier just goes to show you this very
+
+231
+00:08:16,000 --> 00:08:20,160
+difference between what a cost-efficient
+
+232
+00:08:18,120 --> 00:08:22,040
+model and a token-efficient model shows.
+
+233
+00:08:20,160 --> 00:08:24,160
+You also see this token efficiency at
+
+234
+00:08:22,040 --> 00:08:26,360
+work in artificial analysis, where the
+
+235
+00:08:24,160 --> 00:08:28,400
+cost to run the aggregate benchmark that
+
+236
+00:08:26,360 --> 00:08:30,840
+we talked about earlier in the video,
+
+237
+00:08:28,400 --> 00:08:32,560
+GPT-6 used the least amount of tokens to
+
+238
+00:08:30,840 --> 00:08:34,520
+get the job done. Now, I think this
+
+239
+00:08:32,560 --> 00:08:37,320
+creates a really interesting tension in
+
+240
+00:08:34,520 --> 00:08:39,719
+the AI industry. If more and more models
+
+241
+00:08:37,320 --> 00:08:41,719
+are producing fewer tokens to accomplish
+
+242
+00:08:39,719 --> 00:08:43,919
+the same amount of work, then the
+
+243
+00:08:41,719 --> 00:08:46,520
+effective supply of intelligence is
+
+244
+00:08:43,919 --> 00:08:48,680
+increasing per token. So, for labs like
+
+245
+00:08:46,520 --> 00:08:51,040
+OpenAI whose business is largely around
+
+246
+00:08:48,680 --> 00:08:52,520
+monetizing tokens, the tension here is
+
+247
+00:08:51,040 --> 00:08:55,320
+that making the model more
+
+248
+00:08:52,520 --> 00:08:57,280
+token-efficient means OpenAI needs fewer
+
+249
+00:08:55,320 --> 00:08:59,120
+billable tokens to deliver the same
+
+250
+00:08:57,280 --> 00:09:01,200
+amount of value, which means OpenAI
+
+251
+00:08:59,120 --> 00:09:02,920
+practically needs less inference compute
+
+252
+00:09:01,200 --> 00:09:05,120
+for the same amount of demand. And
+
+253
+00:09:02,920 --> 00:09:07,000
+OpenAI could now capture this basically
+
+254
+00:09:05,120 --> 00:09:09,320
+an efficiency gain that they just gained
+
+255
+00:09:07,000 --> 00:09:12,080
+per token and either pass it down to the
+
+256
+00:09:09,320 --> 00:09:14,280
+user to lower the costs per task or
+
+257
+00:09:12,080 --> 00:09:16,480
+increase the price per token, which by
+
+258
+00:09:14,280 --> 00:09:18,640
+looking at GPT-6 pricing and how
+
+259
+00:09:16,480 --> 00:09:20,600
+expensive the model is, the efficiency
+
+260
+00:09:18,640 --> 00:09:22,839
+gain went directly towards OpenAI's
+
+261
+00:09:20,600 --> 00:09:24,839
+profit margin for now, assuming that the
+
+262
+00:09:22,839 --> 00:09:26,520
+inference overhead for GPT-6 really
+
+263
+00:09:24,839 --> 00:09:27,800
+hasn't jumped by that much. And for
+
+264
+00:09:26,520 --> 00:09:30,320
+other labs that are competing with
+
+265
+00:09:27,800 --> 00:09:32,640
+OpenAI, it's not as simple as catching
+
+266
+00:09:30,320 --> 00:09:34,920
+up to OpenAI in terms of capabilities,
+
+267
+00:09:32,640 --> 00:09:36,560
+but more importantly, doing as little
+
+268
+00:09:34,920 --> 00:09:38,400
+work to get the same level of
+
+269
+00:09:36,560 --> 00:09:40,480
+capabilities, which is something that we
+
+270
+00:09:38,400 --> 00:09:42,480
+can directly see in Deep Squeeze, which
+
+271
+00:09:40,480 --> 00:09:44,640
+shows you the operational efficiency
+
+272
+00:09:42,480 --> 00:09:47,280
+when we compare Gemini 3.8 Flash and
+
+273
+00:09:44,640 --> 00:09:49,120
+Opus 5, that scores similarly to Astra,
+
+274
+00:09:47,280 --> 00:09:51,560
+but they're four to five times less
+
+275
+00:09:49,120 --> 00:09:53,640
+efficient per token in comparison to
+
+276
+00:09:51,560 --> 00:09:55,480
+GPT-6 Astra. Now, beyond all the
+
+277
+00:09:53,640 --> 00:09:56,880
+nitty-gritty details that we just walked
+
+278
+00:09:55,480 --> 00:09:58,280
+through, there are also some really
+
+279
+00:09:56,880 --> 00:10:00,720
+exciting things that came with the
+
+280
+00:09:58,280 --> 00:10:02,800
+announcement of GPT-6. The most obvious
+
+281
+00:10:00,720 --> 00:10:04,720
+one being what they showed off in GPT-6
+
+282
+00:10:02,800 --> 00:10:06,480
+computer use, where people made some
+
+283
+00:10:04,720 --> 00:10:08,480
+really cool things just using their
+
+284
+00:10:06,480 --> 00:10:10,360
+voice. Certainly not AGI by my
+
+285
+00:10:08,480 --> 00:10:11,960
+definition, but still a really cool
+
+286
+00:10:10,360 --> 00:10:14,560
+demonstration. While my personal
+
+287
+00:10:11,960 --> 00:10:16,720
+experience with agentic computer use was
+
+288
+00:10:14,560 --> 00:10:18,560
+largely underwhelming to say the least,
+
+289
+00:10:16,720 --> 00:10:20,640
+computer use is just one of those things
+
+290
+00:10:18,560 --> 00:10:22,840
+that I just wanted to be true, but we're
+
+291
+00:10:20,640 --> 00:10:25,200
+just not there yet. And given how GPT-6
+
+292
+00:10:22,840 --> 00:10:26,560
+scored among many relevant benchmarks,
+
+293
+00:10:25,200 --> 00:10:29,040
+it's certainly hinting that we're
+
+294
+00:10:26,560 --> 00:10:30,760
+getting close to finally having Jarvis
+
+295
+00:10:29,040 --> 00:10:32,640
+running at home. I can't even imagine
+
+296
+00:10:30,760 --> 00:10:34,520
+just how much more productive I will be
+
+297
+00:10:32,640 --> 00:10:36,520
+as AI continues to make these things
+
+298
+00:10:34,520 --> 00:10:39,040
+possible. And all of this causes us to
+
+299
+00:10:36,520 --> 00:10:41,080
+really think about what a good model is.
+
+300
+00:10:39,040 --> 00:10:42,920
+A few days ago, we just had Fable 5.1
+
+301
+00:10:41,080 --> 00:10:45,600
+drop from Anthropic, and by certain
+
+302
+00:10:42,920 --> 00:10:48,040
+measurement, Fable 5.1 comes across as a
+
+303
+00:10:45,600 --> 00:10:50,160
+better model than GPT-6. And the true
+
+304
+00:10:48,040 --> 00:10:51,960
+definition of what a good model is
+
+305
+00:10:50,160 --> 00:10:53,839
+certainly changing from simply an
+
+306
+00:10:51,960 --> 00:10:56,000
+intelligent model to a more useful
+
+307
+00:10:53,839 --> 00:10:58,040
+model, where token efficiency, cost
+
+308
+00:10:56,000 --> 00:11:00,600
+efficiency, speed, and how well it
+
+309
+00:10:58,040 --> 00:11:02,520
+scores on real use cases speak more
+
+310
+00:11:00,600 --> 00:11:04,520
+about the model than the old way of
+
+311
+00:11:02,520 --> 00:11:06,160
+measuring the model's capabilities, like
+
+312
+00:11:04,520 --> 00:11:09,360
+how we see in artificial analysis
+
+313
+00:11:06,160 --> 00:11:09,360
+intelligence index.
+

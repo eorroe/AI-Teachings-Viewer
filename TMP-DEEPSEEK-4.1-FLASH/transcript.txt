@@ -1,0 +1,416 @@
+1: 1
+2: 00:00:00,160 --> 00:00:09,840
+3: The new DeepSk is here. 4.1 Flash and it
+4: 
+5: 2
+6: 00:00:04,400 --> 00:00:12,559
+7: is Wow. Look at that. It is incredibly
+8: 
+9: 3
+10: 00:00:09,840 --> 00:00:16,400
+11: fast. And I was also stunned by this.
+12: 
+13: 4
+14: 00:00:12,559 --> 00:00:19,680
+15: Look, it can outperform Claude Opus 5
+16: 
+17: 5
+18: 00:00:16,400 --> 00:00:21,520
+19: Kim K3 on some tests, not everything.
+20: 
+21: 6
+22: 00:00:19,680 --> 00:00:24,560
+23: We'll see about that. But there is a
+24: 
+25: 7
+26: 00:00:21,520 --> 00:00:29,199
+27: catch. I'll show you at the end. It also
+28: 
+29: 8
+30: 00:00:24,560 --> 00:00:31,519
+31: reliably outperforms DeepSeek 4.0 0 Pro,
+32: 
+33: 9
+34: 00:00:29,199 --> 00:00:35,280
+35: which is a huge surprise. I mean, that
+36: 
+37: 10
+38: 00:00:31,519 --> 00:00:37,920
+39: system costs maybe $300K to run locally,
+40: 
+41: 11
+42: 00:00:35,280 --> 00:00:41,200
+43: and this one can be run for a quarter of
+44: 
+45: 12
+46: 00:00:37,920 --> 00:00:44,480
+47: that. Well, that's still a lot of money,
+48: 
+49: 13
+50: 00:00:41,200 --> 00:00:46,719
+51: but the tendency is undeniable. This
+52: 
+53: 14
+54: 00:00:44,480 --> 00:00:49,520
+55: might run in our pocket in a year's
+56: 
+57: 15
+58: 00:00:46,719 --> 00:00:52,559
+59: time. It also has native visual
+60: 
+61: 16
+62: 00:00:49,520 --> 00:00:55,520
+63: understanding. So finally you can give
+64: 
+65: 17
+66: 00:00:52,559 --> 00:00:57,920
+67: it images of an iconic game menu and
+68: 
+69: 18
+70: 00:00:55,520 --> 00:00:59,600
+71: have it write a game that reproduces it.
+72: 
+73: 19
+74: 00:00:57,920 --> 00:01:02,719
+75: I'll tell you more about my other
+76: 
+77: 20
+78: 00:00:59,600 --> 00:01:06,479
+79: experiments at the end. And this is huge
+80: 
+81: 21
+82: 00:01:02,719 --> 00:01:08,159
+83: and small at the same time. How? Well,
+84: 
+85: 22
+86: 00:01:06,479 --> 00:01:11,520
+87: now hold on to your papers, fellow
+88: 
+89: 23
+90: 00:01:08,159 --> 00:01:15,360
+91: scholars. It's small because of the KV
+92: 
+93: 24
+94: 00:01:11,520 --> 00:01:17,280
+95: cache. This contains the context and is
+96: 
+97: 25
+98: 00:01:15,360 --> 00:01:22,640
+99: 437
+100: 
+101: 26
+102: 00:01:17,280 --> 00:01:25,280
+103: times smaller than V1 was 3 years ago,
+104: 
+105: 27
+106: 00:01:22,640 --> 00:01:29,040
+107: but also four times smaller than the
+108: 
+109: 28
+110: 00:01:25,280 --> 00:01:32,159
+111: previous 4.0 flash. But that was just a
+112: 
+113: 29
+114: 00:01:29,040 --> 00:01:35,759
+115: few months ago and you compressed it 4x
+116: 
+117: 30
+118: 00:01:32,159 --> 00:01:38,799
+119: that is what? How did they do that? Do
+120: 
+121: 31
+122: 00:01:35,759 --> 00:01:40,880
+123: we know? Yes, we do. Dear fellow
+124: 
+125: 32
+126: 00:01:38,799 --> 00:01:41,920
+127: scholars, this is two minute papers with
+128: 
+129: 33
+130: 00:01:40,880 --> 00:01:45,840
+131: Dr.
+132: 
+133: 34
+134: 00:01:41,920 --> 00:01:48,076
+135: Eer why? Because this is an open model
+136: 
+137: 35
+138: 00:01:45,840 --> 00:01:50,159
+139: and there is a free research paper
+140: 
+141: 36
+142: 00:01:48,076 --> 00:01:52,880
+143: [music] explaining it. I am not an
+144: 
+145: 37
+146: 00:01:50,159 --> 00:01:54,960
+147: expert just a student but I'll try to
+148: 
+149: 38
+150: 00:01:52,880 --> 00:01:58,479
+151: break it down. They call this technique
+152: 
+153: 39
+154: 00:01:54,960 --> 00:02:01,439
+155: CSA2 and they are finally onto something
+156: 
+157: 40
+158: 00:01:58,479 --> 00:02:05,040
+159: here. You see a neural network is given
+160: 
+161: 41
+162: 00:02:01,439 --> 00:02:07,600
+163: by a lot of layers of neurons and as
+164: 
+165: 42
+166: 00:02:05,040 --> 00:02:10,720
+167: information is propagated through these
+168: 
+169: 43
+170: 00:02:07,600 --> 00:02:15,680
+171: layers each of them has its own KV
+172: 
+173: 44
+174: 00:02:10,720 --> 00:02:19,040
+175: memory but not here. Deepseek 4.1 flash
+176: 
+177: 45
+178: 00:02:15,680 --> 00:02:22,239
+179: finally gives us shared memory between
+180: 
+181: 46
+182: 00:02:19,040 --> 00:02:25,411
+183: the layers. Not everyone has to remember
+184: 
+185: 47
+186: 00:02:22,239 --> 00:02:26,000
+187: everything. No, they share the memories.
+188: 
+189: 48
+190: 00:02:25,411 --> 00:02:28,319
+191: [clears throat]
+192: 
+193: 49
+194: 00:02:26,000 --> 00:02:30,720
+195: It's a nightmare to pull off well
+196: 
+197: 50
+198: 00:02:28,319 --> 00:02:34,319
+199: because different layers need different
+200: 
+201: 51
+202: 00:02:30,720 --> 00:02:37,760
+203: views of the same history. And if we pop
+204: 
+205: 52
+206: 00:02:34,319 --> 00:02:41,519
+207: the hood and look closer,
+208: 
+209: 53
+210: 00:02:37,760 --> 00:02:44,319
+211: look, an an encoder decoder structure.
+212: 
+213: 54
+214: 00:02:41,519 --> 00:02:47,519
+215: The encoder creates a shared global
+216: 
+217: 55
+218: 00:02:44,319 --> 00:02:50,640
+219: memory and the decoder reads from it.
+220: 
+221: 56
+222: 00:02:47,519 --> 00:02:53,840
+223: And all that is what finally gives us a
+224: 
+225: 57
+226: 00:02:50,640 --> 00:02:56,879
+227: much smaller KV cache which is the bane
+228: 
+229: 58
+230: 00:02:53,840 --> 00:03:00,480
+231: of my existence because it needs too
+232: 
+233: 59
+234: 00:02:56,879 --> 00:03:04,319
+235: much video RAM. Incredible leap forward.
+236: 
+237: 60
+238: 00:03:00,480 --> 00:03:07,840
+239: Now I also said this is huge more than
+240: 
+241: 61
+242: 00:03:07,840 --> 00:03:12,879
+243: 500 billion parameters. So I have no
+244: 
+245: 62
+246: 00:03:10,560 --> 00:03:16,319
+247: chance to run this at home whatsoever.
+248: 
+249: 63
+250: 00:03:12,879 --> 00:03:21,599
+251: And when I tried to reproduce this
+252: 
+253: 64
+254: 00:03:16,319 --> 00:03:24,879
+255: beautiful honey coiling paper, GPT6
+256: 
+257: 65
+258: 00:03:21,599 --> 00:03:28,080
+259: Astra nailed it. Absolutely stunning.
+260: 
+261: 66
+262: 00:03:24,879 --> 00:03:31,920
+263: Opus 5.1 not as stunning, but the
+264: 
+265: 67
+266: 00:03:28,080 --> 00:03:33,920
+267: physics is quite formidable. Rendering a
+268: 
+269: 68
+270: 00:03:31,920 --> 00:03:35,920
+271: bit less. So now this one, well, we
+272: 
+273: 69
+274: 00:03:33,920 --> 00:03:38,879
+275: still need to get a couple more papers
+276: 
+277: 70
+278: 00:03:35,920 --> 00:03:41,519
+279: down the line to match that, but it will
+280: 
+281: 71
+282: 00:03:38,879 --> 00:03:43,920
+283: happen. Of that I am certain. And you
+284: 
+285: 72
+286: 00:03:38,879 --> 00:03:43,920
+287: see, I am here to show you the truth,
+288: 
+289: 73
+290: 00:03:41,519 --> 00:03:46,080
+291: not just believe the headlines. Now,
+292: 
+293: 74
+294: 00:03:43,920 --> 00:03:48,319
+295: also, since YouTube stopped recommending
+296: 
+297: 75
+298: 00:03:46,080 --> 00:03:51,120
+299: my physics simulation papers, which
+300: 
+301: 76
+302: 00:03:48,319 --> 00:03:53,840
+303: breaks my heart, at least I get to show
+304: 
+305: 77
+306: 00:03:51,120 --> 00:03:56,080
+307: you this, which fills me with joy.
+308: 
+309: 78
+310: 00:03:53,840 --> 00:03:59,439
+311: Subscribe and hit the bell to see more.
+312: 
+313: 79
+314: 00:03:56,080 --> 00:04:03,120
+315: Also, the catch. 4.1 Flash likes to
+316: 
+317: 80
+318: 00:03:59,439 --> 00:04:05,519
+319: think a lot and burns a lot of tokens.
+320: 
+321: 81
+322: 00:04:03,120 --> 00:04:08,560
+323: Fortunately, it is not that expensive,
+324: 
+325: 82
+326: 00:04:05,519 --> 00:04:10,400
+327: but man, that's a lot of tokens. But if
+328: 
+329: 83
+330: 00:04:08,560 --> 00:04:13,200
+331: you have the hardware, you get to run
+332: 
+333: 84
+334: 00:04:10,400 --> 00:04:16,000
+335: all this for free. I don't, so I run it
+336: 
+337: 85
+338: 00:04:13,200 --> 00:04:18,720
+339: through the API or Lambda. But given
+340: 
+341: 86
+342: 00:04:16,000 --> 00:04:22,079
+343: that every time DeepS publishes a new
+344: 
+345: 87
+346: 00:04:18,720 --> 00:04:25,280
+347: paper, AI gets cheaper for all of us.
+348: 
+349: 88
+350: 00:04:22,079 --> 00:04:28,320
+351: So, thank you so much for that huge
+352: 
+353: 89
+354: 00:04:25,280 --> 00:04:31,040
+355: contribution to humanity. This is going
+356: 
+357: 90
+358: 00:04:28,320 --> 00:04:34,400
+359: to help a lot of doctors and scientists
+360: 
+361: 91
+362: 00:04:31,040 --> 00:04:37,520
+363: do their work. Open science for the win.
+364: 
+365: 92
+366: 00:04:34,400 --> 00:04:40,639
+367: What a time to be alive. I use Lambda to
+368: 
+369: 93
+370: 00:04:37,520 --> 00:04:42,880
+371: reproduce AI research papers, often in
+372: 
+373: 94
+374: 00:04:40,639 --> 00:04:45,919
+375: minutes. It's also great to train your
+376: 
+377: 95
+378: 00:04:42,880 --> 00:04:48,960
+379: own models or fine-tune an existing one.
+380: 
+381: 96
+382: 00:04:45,919 --> 00:04:51,840
+383: Run inference or text to image or video.
+384: 
+385: 97
+386: 00:04:48,960 --> 00:04:55,040
+387: Easy peasy. Running a Deepseek chatbot
+388: 
+389: 98
+390: 00:04:51,840 --> 00:04:58,080
+391: or agent. Super fast, super reliable.
+392: 
+393: 99
+394: 00:04:55,040 --> 00:05:00,639
+395: Lambda gives you powerful NVIDIA GPUs to
+396: 
+397: 100
+398: 00:04:58,080 --> 00:05:03,280
+399: run your own experiments. I test ideas
+400: 
+401: 101
+402: 00:05:00,639 --> 00:05:06,800
+403: from the papers I cover and moments
+404: 
+405: 102
+406: 00:05:03,280 --> 00:05:09,600
+407: later, results. Love it. Seriously, try
+408: 
+409: 103
+410: 00:05:06,800 --> 00:05:11,840
+411: it out now at lambda.ai/papers. EI/
+412: 
+413: 104
+414: 00:05:09,600 --> 00:05:11,840
+415: peepers.
+416: 

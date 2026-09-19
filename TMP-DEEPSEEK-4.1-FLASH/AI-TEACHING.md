@@ -2,70 +2,66 @@
 
 ## Overview
 
-A breakdown of the DeepSeek 4.1 Flash model, its architecture, performance characteristics, and tradeoffs. This teaching distills the primary claims from the Two Minute Papers video so you can decide whether to use the model, understand how it compares to other leading systems, and plan for its token-heavy inference behavior.
+A breakdown of the DeepSeek 4.1 Flash model, Claude Opus 5, DeepSeek 4.0 Pro, Kim K3, GPT6 Astra, and Opus 5.1 comparisons. This teaching covers the main points discussed from the Two Minute Papers channel so you can decide whether to use the model, understand how it compares to other models mentioned, and plan for its token usage.
 
 ## When to Follow These AI Teachings
 
-- When you need to evaluate whether DeepSeek 4.1 Flash is the right model for a task given its speed and benchmark performance relative to Claude Opus 5 and Gemini 3
-- When working with large-scale open models that require API or Lambda inference rather than local execution
-- When the user asks about visual understanding capabilities or game reproduction tasks from image inputs
-- When optimizing KV cache memory usage for transformer models
+- When you need to evaluate whether DeepSeek 4.1 Flash is the right model given its performance on some tests, not everything, relative to Claude Opus 5
+- When evaluating deployment paths for open models, noting that local execution is impractical given the more than 500 billion parameter count
+- For native visual understanding, you can give it images
+- When working with KV cache and video RAM for neural network models
 
 ## Steps
 
 ### Step 1: Assess the Model Against Your Requirements
 
-Determine whether the model's strengths match your needs. DeepSeek 4.1 Flash reliably outperforms DeepSeek 4.0 Pro on specific benchmarks and can surpass Claude Opus 5 and Gemini 3 on specific tests. It is described as incredibly fast and includes native visual understanding, allowing it to generate playable games from menu images. Consider these capabilities when selecting a model for multimodal or high-speed inference tasks.
+Determine whether the model's strengths match your needs. DeepSeek 4.1 Flash reliably outperforms DeepSeek 4.0 Pro and can outperform Claude Opus 5 on some tests, not everything. It is incredibly fast and includes native visual understanding, allowing it to write a game that reproduces it from iconic game menu images. Consider these capabilities when selecting a model for visual understanding or fast inference tasks.
 
 ### Step 2: Understand the Architecture and Memory Tradeoffs
 
-The model uses 500 billion parameters and implements a CSA2 architecture with shared KV cache memory between layers via an encoder-decoder structure. The encoder produces a shared global memory representation that the decoder reads from, reducing redundancy. This results in a KV cache that is 4x smaller than the previous 4.0 Flash and 437x smaller than the V1 model from three years ago. Factor the reduced VRAM footprint into your deployment and hardware planning.
+The model uses more than 500 billion parameters and uses a technique called CSA2 using an encoder-decoder structure in which the encoder creates a shared global memory that the decoder reads from. this gives us a much smaller KV cache that is 4x smaller than the previous 4.0 Flash and 437x smaller than the V1 model from three years ago. Factor the reduced video RAM requirements into your deployment and hardware planning.
 
-### Step 3: Plan for High Token Consumption
+### Step 3: Plan for Token Usage
 
-DeepSeek 4.1 Flash tends to think extensively and consumes a high volume of tokens per query. While inference through the API or Lambda is not prohibitively expensive, the token volume can add up. Budget token costs accordingly and consider prompt constraints or output limits if cost is a concern.
+DeepSeek 4.1 Flash likes to think a lot and burns a lot of tokens. Inference via API or Lambda is not that expensive, but the model burns a lot of tokens.
 
 ### Step 4: Choose an Inference Path
 
-The model is open and documented with a free research paper. It is not practical to run locally for most users due to the 500 billion parameter count and associated hardware costs. Use the official API or Lambda for inference, fine-tuning, or experimentation. Lambda provides NVIDIA GPU access suitable for reproducing research, training custom models, or running inference at scale.
+The model is open and there is a free research paper. I have no chance to run this at home whatsoever due to the more than 500 billion parameter count, The previous 4.0 Pro system costs maybe $300K to run locally; this model can be run for a quarter of that cost. Use the official API or Lambda for inference. Lambda provides NVIDIA GPU access to run your own experiments, often in minutes, train your own models or fine-tune an existing one, run inference or text to image or video.
 
 ## Examples
 
 ### Example 1: Benchmarking Against Other Models
 
-If you are comparing frontier models for a coding or reasoning task, include DeepSeek 4.1 Flash in your evaluation. On specific benchmarks it outperforms Claude Opus 5 and Gemini 3, while reliably exceeding DeepSeek 4.0 Pro. Run identical prompts across candidates to verify whether the speed and accuracy gains hold for your specific use case.
+If you are comparing models for physics simulation papers or to write a game that reproduces it from images of an iconic game menu, include DeepSeek 4.1 Flash in your evaluation. On some tests it can outperform Claude Opus 5, not everything, while reliably outperforms DeepSeek 4.0 Pro. Compare claims across models to verify whether the speed and accuracy claims hold for your specific tests.
 
 ### Example 2: Visual Game Reproduction from Screenshots
 
-Feed an iconic game menu image into DeepSeek 4.1 Flash with a prompt to write a game that reproduces the menu layout. The model's native visual understanding can generate playable results without additional vision-specific fine-tuning. Iterate on the generated code to refine gameplay, assets, or mechanics.
+Give it images of an iconic game menu and have it write a game that reproduces it.
 
 ## Best Practices
 
-- ✅ Include DeepSeek 4.1 Flash in model selection evaluations when speed and benchmark performance are priorities
-- ✅ Use the official API or Lambda for inference rather than attempting local deployment without suitable hardware
-- ✅ Leverage the open research paper to understand CSA2, shared KV cache design, and encoder-decoder memory structures
-- ✅ Monitor token usage closely because the model generates long reasoning chains by default
-- ❌ Don't assume local feasibility without confirming GPU memory can accommodate 500 billion parameters
-- ❌ Don't ignore KV cache memory reduction benefits when designing long-context applications
-- ❌ Don't overlook prompt-level token budgets given the model's tendency to generate verbose outputs
+- ✅ Include DeepSeek 4.1 Flash when evaluating whether it is the right model when the model is incredibly fast
+- ✅ Use the official API or Lambda for inference rather than attempting local deployment given the more than 500 billion parameter count
+- ✅ there is a free research paper explaining CSA2, which uses an encoder-decoder structure where the encoder creates a shared global memory that the decoder reads from
+- ✅ Monitor token usage closely because the model likes to think a lot and burns a lot of tokens
+- ❌ Don't assume local feasibility without confirming the cost (more than 500 billion parameters; costs maybe $300K to run locally, and this one can be run for a quarter of that) is acceptable
+- ❌ Don't ignore KV cache is 4x smaller than the previous 4.0 Flash and 437x smaller than the original V1 when designing applications using context
+- ❌ Budget additional tokens per request to account for the model's tendency to think a lot
 
 ## Keep In Mind
 
-- KV cache compression of 4x over the prior 4.0 Flash and 437x over the original V1 significantly reduces VRAM requirements for long contexts
-- 500 billion parameters makes local execution impractical for most users; treat this as a cloud-only model
-- The model is open, and the research paper is freely available
+- KV cache is 4x smaller than the previous 4.0 Flash and 437x smaller than V1. KV cache needs too much video RAM.
+- The previous 4.0 Pro system costs maybe $300K to run locally, and this one can be run for a quarter of that. Well, that's still a lot of money, but the tendency is undeniable. I have no chance to run this at home whatsoever.
+- there is a free research paper explaining it
 
 ## Security & Safety Notes
 
-- Treat model outputs as untrusted code when reproducing games or generating applications; review and sandbox before execution
-- API and Lambda usage involves third-party infrastructure; apply standard cloud security practices for key management and access control
-- Open model weights can be hosted externally; verify provenance and integrity if self-hosting becomes feasible in the future
-
 ## Common Pitfalls
 
-- **Problem:** Unexpectedly high API costs from verbose model outputs
-  **Solution:** Set output token limits, constrain prompts, and monitor usage dashboards to control spend
-- **Problem:** Attempting local deployment without adequate GPU VRAM
-  **Solution:** Use the API or Lambda until hardware capable of holding 500 billion parameters is available
-- **Problem:** Assuming benchmark performance translates to every downstream task
-  **Solution:** Validate the model against your specific tasks and datasets before committing to production use
+- **Problem:** it is not that expensive, but the model burns a lot of tokens
+  **Solution:** Budget token costs accordingly
+- **Problem:** KV cache needs too much video RAM
+  **Solution:** Use the API or Lambda because local deployment is impractical
+- **Problem:** not just believe the headlines we still need to get a couple more papers down the line
+  **Solution:** Recognize that additional papers and validation are needed before believing headlines additional papers are needed

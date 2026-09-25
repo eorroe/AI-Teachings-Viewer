@@ -1,0 +1,1171 @@
+1
+00:00:00,400 --> 00:00:05,520
+Hello everyone.
+
+2
+00:00:02,320 --> 00:00:08,080
+This pipeline is still experimental, but
+
+3
+00:00:05,520 --> 00:00:11,200
+I decide to make a tutorial because many
+
+4
+00:00:08,080 --> 00:00:13,679
+of you asked for it. To keep the process
+
+5
+00:00:11,200 --> 00:00:17,199
+fast, I will show you only the basic
+
+6
+00:00:13,679 --> 00:00:20,320
+steps. The final quality you see here is
+
+7
+00:00:17,199 --> 00:00:23,600
+not the best possible because that will
+
+8
+00:00:20,320 --> 00:00:26,720
+take much more time. The goal is to
+
+9
+00:00:23,600 --> 00:00:29,760
+teach you the basics. After that, you
+
+10
+00:00:26,720 --> 00:00:33,520
+can try things your own. The first thing
+
+11
+00:00:29,760 --> 00:00:35,840
+we need is an AI generated face image.
+
+12
+00:00:33,520 --> 00:00:38,800
+I'm using Mid Journey, but you can use
+
+13
+00:00:35,840 --> 00:00:42,239
+any tool you like. What matter is that
+
+14
+00:00:38,800 --> 00:00:44,559
+the wall head is visible.
+
+15
+00:00:42,239 --> 00:00:48,640
+The second step is to improve the
+
+16
+00:00:44,559 --> 00:00:52,000
+quality with an enhancer. I use Craya AI
+
+17
+00:00:48,640 --> 00:00:55,280
+because it's free and works well. The
+
+18
+00:00:52,000 --> 00:00:57,840
+third step is AI to 3D model. There are
+
+19
+00:00:55,280 --> 00:01:00,320
+many AI tools for these [music] and they
+
+20
+00:00:57,840 --> 00:01:03,600
+are growing very fast. In this project,
+
+21
+00:01:00,320 --> 00:01:05,439
+I tested Tripo 3D to see how it works.
+
+22
+00:01:03,600 --> 00:01:08,159
+The generation time is only a few
+
+23
+00:01:05,439 --> 00:01:10,400
+minutes. All the link for the tool I use
+
+24
+00:01:08,159 --> 00:01:12,799
+will be in the description of the video.
+
+25
+00:01:10,400 --> 00:01:15,280
+Once the model is generated, we can also
+
+26
+00:01:12,799 --> 00:01:18,320
+create a texture. The quality will be
+
+27
+00:01:15,280 --> 00:01:21,200
+not great, [music] but it is useful for
+
+28
+00:01:18,320 --> 00:01:23,200
+a basic guide. As you can see, the
+
+29
+00:01:21,200 --> 00:01:25,840
+geometry is not bad at all, [music] even
+
+30
+00:01:23,200 --> 00:01:28,240
+if it was created from a single image.
+
+31
+00:01:25,840 --> 00:01:30,400
+You can use more images, but in my
+
+32
+00:01:28,240 --> 00:01:33,200
+tests, the proportions were always
+
+33
+00:01:30,400 --> 00:01:35,280
+wrong. It is much better to fix
+
+34
+00:01:33,200 --> 00:01:37,759
+everything in Blender, and I will show
+
+35
+00:01:35,280 --> 00:01:39,200
+you how to do it later in the video.
+
+36
+00:01:37,759 --> 00:01:41,040
+Before we [music] start to work in
+
+37
+00:01:39,200 --> 00:01:45,600
+Blender, we need to download the model
+
+38
+00:01:41,040 --> 00:01:47,759
+from Tripo 3D. I downloaded as GB file
+
+39
+00:01:45,600 --> 00:01:50,960
+because it keeps the geometry and the
+
+40
+00:01:47,759 --> 00:01:52,799
+basic texture together. Once the GB is
+
+41
+00:01:50,960 --> 00:01:56,560
+exported, we can bring it to [music]
+
+42
+00:01:52,799 --> 00:01:59,840
+Blender and continue the workflow.
+
+43
+00:01:56,560 --> 00:02:02,399
+Now we move into Blender. First, I fix
+
+44
+00:01:59,840 --> 00:02:06,000
+the rotation and the scale of the model
+
+45
+00:02:02,399 --> 00:02:08,479
+because the GLB file from Tripod 3D
+
+46
+00:02:06,000 --> 00:02:11,360
+often comes in with the wrong
+
+47
+00:02:08,479 --> 00:02:13,360
+orientation. This part is very fast. I
+
+48
+00:02:11,360 --> 00:02:16,319
+rotate the model to face forward and
+
+49
+00:02:13,360 --> 00:02:18,959
+apply the scale so everything is clean.
+
+50
+00:02:16,319 --> 00:02:21,360
+Before we start sculpting, there is one
+
+51
+00:02:18,959 --> 00:02:24,640
+important step [music] we need to use.
+
+52
+00:02:21,360 --> 00:02:27,360
+Merge by distance. If you skip this, the
+
+53
+00:02:24,640 --> 00:02:28,879
+mesh will break during the sculpt. You
+
+54
+00:02:27,360 --> 00:02:31,920
+will see holes and the surface [music]
+
+55
+00:02:28,879 --> 00:02:34,560
+will open. This happens because the AI
+
+56
+00:02:31,920 --> 00:02:37,200
+model has many double vertices and the
+
+57
+00:02:34,560 --> 00:02:39,200
+surface is not really connected. When
+
+58
+00:02:37,200 --> 00:02:43,040
+you move on the point, the other one
+
+59
+00:02:39,200 --> 00:02:46,400
+stay in place and create gaps. Merge by
+
+60
+00:02:43,040 --> 00:02:49,599
+distance removes the duplicated vertices
+
+61
+00:02:46,400 --> 00:02:52,160
+and makes the surface solid. After that,
+
+62
+00:02:49,599 --> 00:02:55,640
+you can start sculpting and fixing
+
+63
+00:02:52,160 --> 00:02:55,640
+without problems.
+
+64
+00:02:55,680 --> 00:03:00,160
+In this case, the proportions came out
+
+65
+00:02:58,161 --> 00:03:01,760
+[music] surprisingly good, but you
+
+66
+00:03:00,160 --> 00:03:04,879
+should still sculpt and improve the
+
+67
+00:03:01,760 --> 00:03:07,920
+areas you want before moving to the wrap
+
+68
+00:03:04,879 --> 00:03:10,800
+on the metauman topology. Even if the
+
+69
+00:03:07,920 --> 00:03:12,640
+base look is fine, sculpting give you
+
+70
+00:03:10,800 --> 00:03:15,040
+control and help to [music] get cleaner
+
+71
+00:03:12,640 --> 00:03:16,800
+and more accurate shape for the final
+
+72
+00:03:15,040 --> 00:03:19,120
+result.
+
+73
+00:03:16,800 --> 00:03:22,400
+Now we need a clean quote polygon base
+
+74
+00:03:19,120 --> 00:03:25,840
+mesh, a conformed metauman topology. You
+
+75
+00:03:22,400 --> 00:03:28,159
+can find one on Fab. Download it and
+
+76
+00:03:25,840 --> 00:03:32,000
+open it in Blender.
+
+77
+00:03:28,159 --> 00:03:34,799
+The file from FAB will be in FBX format
+
+78
+00:03:32,000 --> 00:03:36,879
+and the scale will be very small. In
+
+79
+00:03:34,799 --> 00:03:39,599
+this tutorial, we will focus only on the
+
+80
+00:03:36,879 --> 00:03:42,319
+head. Eyes and teeth will be placed
+
+81
+00:03:39,599 --> 00:03:44,959
+automatically by Metahuman Creator. It
+
+82
+00:03:42,319 --> 00:03:47,120
+is possible to edit and sculpt them too,
+
+83
+00:03:44,959 --> 00:03:51,120
+but we will not do that in this video
+
+84
+00:03:47,120 --> 00:03:55,440
+because it takes more time. So, uh,
+
+85
+00:03:51,120 --> 00:03:57,840
+click the head and put the scale to one.
+
+86
+00:03:55,440 --> 00:04:00,560
+Now, we need to match the AI head with
+
+87
+00:03:57,840 --> 00:04:03,519
+the metauman head. Try to adjust the
+
+88
+00:04:00,560 --> 00:04:06,720
+scale and rotation and position so they
+
+89
+00:04:03,519 --> 00:04:09,760
+look similar in shape. When everything
+
+90
+00:04:06,720 --> 00:04:14,640
+is in the right place, export both
+
+91
+00:04:09,760 --> 00:04:17,759
+models as OBJ files. Before exporting,
+
+92
+00:04:14,640 --> 00:04:20,079
+remember to right click on each mesh and
+
+93
+00:04:17,759 --> 00:04:24,000
+apply all transforms.
+
+94
+00:04:20,079 --> 00:04:28,199
+This step is important or the OBJ export
+
+95
+00:04:24,000 --> 00:04:28,199
+will not match correctly.
+
+96
+00:04:32,960 --> 00:04:37,199
+There are several ways to do the
+
+97
+00:04:34,880 --> 00:04:40,479
+wrapping. For this tutorial, I choose a
+
+98
+00:04:37,199 --> 00:04:43,120
+face form rock. They offer a 30-day
+
+99
+00:04:40,479 --> 00:04:45,440
+trial and you can download from their
+
+100
+00:04:43,120 --> 00:04:47,840
+website.
+
+101
+00:04:45,440 --> 00:04:50,000
+Now, we export the texture from the A
+
+102
+00:04:47,840 --> 00:04:52,800
+model inside Blender and save it as a
+
+103
+00:04:50,000 --> 00:04:55,520
+PNG. In the wrapping software, we need
+
+104
+00:04:52,800 --> 00:04:57,680
+to do two wraps.
+
+105
+00:04:55,520 --> 00:05:00,960
+You can find on the gallery the basic
+
+106
+00:04:57,680 --> 00:05:04,800
+wrap workflow. The first wrap is the
+
+107
+00:05:00,960 --> 00:05:07,680
+basic one step 01. Here we get the main
+
+108
+00:05:04,800 --> 00:05:10,400
+shape but the eyes will be corrupted
+
+109
+00:05:07,680 --> 00:05:15,039
+because in the AI model just like in the
+
+110
+00:05:10,400 --> 00:05:18,639
+real scans the eyes inside are drunk.
+
+111
+00:05:15,039 --> 00:05:21,199
+For this first pass we also make a mask
+
+112
+00:05:18,639 --> 00:05:24,960
+on the neck area because we don't need
+
+113
+00:05:21,199 --> 00:05:28,800
+to wrap that [music] part. Once the pass
+
+114
+00:05:24,960 --> 00:05:31,680
+01 is done, we save it and load it again
+
+115
+00:05:28,800 --> 00:05:34,720
+in the place of the scan.
+
+116
+00:05:31,680 --> 00:05:38,320
+Now we make a second wrap, but this time
+
+117
+00:05:34,720 --> 00:05:41,720
+we mask both the inside and the outside
+
+118
+00:05:38,320 --> 00:05:41,720
+of the eyes.
+
+119
+00:05:41,919 --> 00:05:47,039
+Inside the wrapping software, we also
+
+120
+00:05:44,160 --> 00:05:50,000
+need to export the texture. We project
+
+121
+00:05:47,039 --> 00:05:53,280
+the texture on the metauman UV using the
+
+122
+00:05:50,000 --> 00:05:56,979
+texture transfer option in the gallery.
+
+123
+00:05:53,280 --> 00:05:59,840
+Then we save it as PNG in 2K or 4K
+
+124
+00:05:56,979 --> 00:06:03,039
+[music] depending on what you prefer.
+
+125
+00:05:59,840 --> 00:06:04,880
+But remember the AI quality output image
+
+126
+00:06:03,039 --> 00:06:06,880
+is not good at all. It's only a
+
+127
+00:06:04,880 --> 00:06:09,360
+reference.
+
+128
+00:06:06,880 --> 00:06:13,680
+Now we finalize the meta human head
+
+129
+00:06:09,360 --> 00:06:16,319
+inside ZBrush. Here we fix the areas
+
+130
+00:06:13,680 --> 00:06:18,720
+that were not wrapped correctly like the
+
+131
+00:06:16,319 --> 00:06:21,360
+eyes and the ears.
+
+132
+00:06:18,720 --> 00:06:24,479
+It is very useful to keep AI reference
+
+133
+00:06:21,360 --> 00:06:27,039
+image visible in overlay with a program
+
+134
+00:06:24,479 --> 00:06:30,000
+like P ref.
+
+135
+00:06:27,039 --> 00:06:33,840
+The main brushes [music] will we use are
+
+136
+00:06:30,000 --> 00:06:36,800
+smooth and move brush. Be careful with
+
+137
+00:06:33,840 --> 00:06:38,800
+the strength and the pressure or you
+
+138
+00:06:36,800 --> 00:06:40,560
+will [music] smooth too much and lose
+
+139
+00:06:38,800 --> 00:06:43,360
+details.
+
+140
+00:06:40,560 --> 00:06:46,319
+Remember that many facial features like
+
+141
+00:06:43,360 --> 00:06:48,800
+the eyes and the ears can be fixed very
+
+142
+00:06:46,319 --> 00:06:51,919
+easily later inside the metauman creator
+
+143
+00:06:48,800 --> 00:06:54,479
+with the building tools. Working on the
+
+144
+00:06:51,919 --> 00:06:56,800
+finished model also with the correct
+
+145
+00:06:54,479 --> 00:06:59,199
+texture in metauman creator is much more
+
+146
+00:06:56,800 --> 00:07:01,199
+intuitive than working on the clay
+
+147
+00:06:59,199 --> 00:07:03,120
+material.
+
+148
+00:07:01,199 --> 00:07:05,840
+What we need to do here in ZBrush are
+
+149
+00:07:03,120 --> 00:07:08,800
+two things. Create the level one
+
+150
+00:07:05,840 --> 00:07:12,000
+conformant mesh which will [music] one
+
+151
+00:07:08,800 --> 00:07:13,599
+that we use inside the metahuman creator
+
+152
+00:07:12,000 --> 00:07:16,479
+and [snorts] create the high density
+
+153
+00:07:13,599 --> 00:07:20,160
+mesh. We'll [music] use that for pore
+
+154
+00:07:16,479 --> 00:07:22,800
+details and baking in substance painter.
+
+155
+00:07:20,160 --> 00:07:25,360
+These processes take a long time and
+
+156
+00:07:22,800 --> 00:07:26,720
+there are many way to do it. You can use
+
+157
+00:07:25,360 --> 00:07:28,960
+alpha brushes or use [music]
+
+158
+00:07:26,720 --> 00:07:31,680
+displacement map or you can create pores
+
+159
+00:07:28,960 --> 00:07:33,440
+with the noise tool. In this video, I
+
+160
+00:07:31,680 --> 00:07:35,840
+will use all the three method, but I
+
+161
+00:07:33,440 --> 00:07:38,800
+will speed up the sculpting part until
+
+162
+00:07:35,840 --> 00:07:40,800
+we reach the final result. It does not
+
+163
+00:07:38,800 --> 00:07:43,599
+make sense to go deeper in every method
+
+164
+00:07:40,800 --> 00:07:44,960
+here because this tutorial is focused on
+
+165
+00:07:43,599 --> 00:07:47,680
+the main steps. [music]
+
+166
+00:07:44,960 --> 00:07:50,400
+It's impossible to explain everything in
+
+167
+00:07:47,680 --> 00:07:52,960
+a single video. If you're missing some
+
+168
+00:07:50,400 --> 00:07:56,080
+information, you can easily search the
+
+169
+00:07:52,960 --> 00:07:59,479
+basic of wrapping or pore sculpting to
+
+170
+00:07:56,080 --> 00:07:59,479
+fill the gaps.
+
+171
+00:14:58,959 --> 00:15:04,160
+Inside Substance Painter, we perform a
+
+172
+00:15:01,680 --> 00:15:06,959
+bake from the high poly mesh to the low
+
+173
+00:15:04,160 --> 00:15:09,680
+poly mesh. This will give us the normal
+
+174
+00:15:06,959 --> 00:15:12,399
+map, cavity map, ambient occlusion, and
+
+175
+00:15:09,680 --> 00:15:14,320
+all the map we need. You will notice
+
+176
+00:15:12,399 --> 00:15:18,399
+that the small details we created in
+
+177
+00:15:14,320 --> 00:15:21,120
+ZBrush are partially lost even if the
+
+178
+00:15:18,399 --> 00:15:24,320
+bake is correct. To increase the [music]
+
+179
+00:15:21,120 --> 00:15:26,800
+detail and the match the look that we
+
+180
+00:15:24,320 --> 00:15:31,040
+had in ZBrush, we will use the cavity
+
+181
+00:15:26,800 --> 00:15:32,880
+map on the hate channel inside a mask.
+
+182
+00:15:31,040 --> 00:15:36,480
+On the left [snorts] side under texture
+
+183
+00:15:32,880 --> 00:15:39,600
+you will find all the baked maps. We
+
+184
+00:15:36,480 --> 00:15:42,800
+create a new fill layer. Enable only the
+
+185
+00:15:39,600 --> 00:15:44,800
+hate channel and set the slider around
+
+186
+00:15:42,800 --> 00:15:48,639
+0.5.
+
+187
+00:15:44,800 --> 00:15:51,759
+Then we add a black mask. Inside the
+
+188
+00:15:48,639 --> 00:15:55,519
+mask we create a fill layer and place
+
+189
+00:15:51,759 --> 00:15:58,320
+the cavity map into the eight channel.
+
+190
+00:15:55,519 --> 00:16:00,880
+Now going back to the main material, we
+
+191
+00:15:58,320 --> 00:16:03,440
+can control the intensity using the
+
+192
+00:16:00,880 --> 00:16:05,600
+eight slider.
+
+193
+00:16:03,440 --> 00:16:09,279
+Do not push the sharpness or the heat
+
+194
+00:16:05,600 --> 00:16:12,680
+value too much. A small amount give the
+
+195
+00:16:09,279 --> 00:16:12,680
+best result.
+
+196
+00:16:23,600 --> 00:16:29,279
+To speed up this long process, I decide
+
+197
+00:16:26,399 --> 00:16:32,399
+to start from a texture from 3D scan
+
+198
+00:16:29,279 --> 00:16:35,199
+store. I choose a subject with a skin
+
+199
+00:16:32,399 --> 00:16:38,160
+tone that match our model and I bought
+
+200
+00:16:35,199 --> 00:16:41,199
+the meta human ID because the only thing
+
+201
+00:16:38,160 --> 00:16:44,480
+we need from it is the albido map and
+
+202
+00:16:41,199 --> 00:16:46,079
+maybe the normal. Right now, 3D scan
+
+203
+00:16:44,480 --> 00:16:49,279
+store also [music]
+
+204
+00:16:46,079 --> 00:16:53,480
+has a very good discount, so it's a good
+
+205
+00:16:49,279 --> 00:16:53,480
+moment to check [music] their texture.
+
+206
+00:16:54,880 --> 00:17:00,240
+The texturing process in Substance has
+
+207
+00:16:57,600 --> 00:17:02,560
+many different approaches. To keep
+
+208
+00:17:00,240 --> 00:17:04,959
+things simple in this video, I will
+
+209
+00:17:02,560 --> 00:17:07,919
+focus only on the basic map and the
+
+210
+00:17:04,959 --> 00:17:11,120
+tattoo. For this, [music] we need a
+
+211
+00:17:07,919 --> 00:17:13,520
+smart material for substance. I found a
+
+212
+00:17:11,120 --> 00:17:14,720
+very good one on the Earth station and
+
+213
+00:17:13,520 --> 00:17:16,319
+the [music] link will be in the
+
+214
+00:17:14,720 --> 00:17:18,880
+description.
+
+215
+00:17:16,319 --> 00:17:21,280
+The most time in consuming part [music]
+
+216
+00:17:18,880 --> 00:17:24,959
+is exporting the tattoo generated by the
+
+217
+00:17:21,280 --> 00:17:27,439
+AI. There are many way to do this. In
+
+218
+00:17:24,959 --> 00:17:30,080
+this tutorial, [music] I will do it fast
+
+219
+00:17:27,439 --> 00:17:33,360
+and not in the best way just to show you
+
+220
+00:17:30,080 --> 00:17:35,872
+the basic idea. The test the texturing
+
+221
+00:17:33,360 --> 00:17:38,559
+process is probably the most important
+
+222
+00:17:35,872 --> 00:17:41,679
+[music] part and it needs many hours of
+
+223
+00:17:38,559 --> 00:17:44,387
+work. Have fun with it and take your
+
+224
+00:17:41,679 --> 00:17:46,320
+time. You can redraw the tattoo by
+
+225
+00:17:44,387 --> 00:17:48,799
+[music] hand in Photoshop. You can
+
+226
+00:17:46,320 --> 00:17:50,480
+generate it with the AI using reference
+
+227
+00:17:48,799 --> 00:17:53,200
+or you can blend the different [music]
+
+228
+00:17:50,480 --> 00:17:55,919
+texture together. There is no perfect
+
+229
+00:17:53,200 --> 00:17:59,280
+method. The important things is to enjoy
+
+230
+00:17:55,919 --> 00:18:02,320
+the process. When you are done, export
+
+231
+00:17:59,280 --> 00:18:05,200
+all the maps using the Unreal preset.
+
+232
+00:18:02,320 --> 00:18:06,799
+Set the resolution to 8K for better
+
+233
+00:18:05,200 --> 00:18:09,840
+quality.
+
+234
+00:18:06,799 --> 00:18:12,320
+In Unreal, we import the conformed mesh
+
+235
+00:18:09,840 --> 00:18:14,720
+and the albido and the normal map we
+
+236
+00:18:12,320 --> 00:18:18,799
+generated in Substance.
+
+237
+00:18:14,720 --> 00:18:21,760
+Then we create a new metauman character.
+
+238
+00:18:18,799 --> 00:18:25,039
+In the creator panel, choose conform
+
+239
+00:18:21,760 --> 00:18:29,200
+from template and select our custom
+
+240
+00:18:25,039 --> 00:18:31,840
+mesh. This way we get our metauman
+
+241
+00:18:29,200 --> 00:18:34,880
+without using mesh to metauman and the
+
+242
+00:18:31,840 --> 00:18:37,440
+result is more accurate.
+
+243
+00:18:34,880 --> 00:18:40,720
+Now we pick a skin color that is that is
+
+244
+00:18:37,440 --> 00:18:44,160
+close to our target subject and then we
+
+245
+00:18:40,720 --> 00:18:46,960
+load our textures into the main albido
+
+246
+00:18:44,160 --> 00:18:49,120
+and the normal channel.
+
+247
+00:18:46,960 --> 00:18:52,080
+Play with the creator and make small
+
+248
+00:18:49,120 --> 00:18:54,720
+changes. Change the eye color, the
+
+249
+00:18:52,080 --> 00:18:57,919
+teeth. Use the sliders to adjust the
+
+250
+00:18:54,720 --> 00:19:00,640
+face shape and the eyes so you get a
+
+251
+00:18:57,919 --> 00:19:04,480
+closer match to your reference. Take
+
+252
+00:19:00,640 --> 00:19:09,480
+your time and have fun. Just remember to
+
+253
+00:19:04,480 --> 00:19:09,480
+save your work from time to time.
+
+254
+00:20:23,679 --> 00:20:29,039
+When you are done. Export the skeletal
+
+255
+00:20:26,160 --> 00:20:31,679
+head mesh from the grooming to work in
+
+256
+00:20:29,039 --> 00:20:34,080
+Blender. You can export it from the top
+
+257
+00:20:31,679 --> 00:20:37,559
+menu [music] following the step I show
+
+258
+00:20:34,080 --> 00:20:37,559
+you on the screen.
+
+259
+00:20:41,039 --> 00:20:46,559
+Once you are in Blender, you can create
+
+260
+00:20:43,120 --> 00:20:49,840
+your groom. In this case, we will make a
+
+261
+00:20:46,559 --> 00:20:52,799
+simple bird just like in the reference.
+
+262
+00:20:49,840 --> 00:20:55,520
+The groom geometry node system is very
+
+263
+00:20:52,799 --> 00:20:59,200
+easy to use and there are many tutorials
+
+264
+00:20:55,520 --> 00:21:02,840
+online. If you need extra help, just
+
+265
+00:20:59,200 --> 00:21:02,840
+take a look at it.
+
+266
+00:22:49,120 --> 00:22:53,440
+There are many tutorials online that
+
+267
+00:22:51,200 --> 00:22:56,640
+explain how to create a parametric
+
+268
+00:22:53,440 --> 00:22:59,440
+groom. But here is a quick summary.
+
+269
+00:22:56,640 --> 00:23:02,159
+First, create a binding for the skeletal
+
+270
+00:22:59,440 --> 00:23:05,440
+mesh on your Metauman.
+
+271
+00:23:02,159 --> 00:23:08,400
+Then, open your groom and copy the
+
+272
+00:23:05,440 --> 00:23:10,960
+parameters from an existing groom. You
+
+273
+00:23:08,400 --> 00:23:12,559
+will need the materials and the strand
+
+274
+00:23:10,960 --> 00:23:14,559
+settings.
+
+275
+00:23:12,559 --> 00:23:17,520
+These settings are not the same for
+
+276
+00:23:14,559 --> 00:23:20,559
+every groom, so you need to experiment a
+
+277
+00:23:17,520 --> 00:23:23,919
+bit with the shadow bias and the groom
+
+278
+00:23:20,559 --> 00:23:27,039
+radius until it looks right.
+
+279
+00:23:23,919 --> 00:23:30,080
+Once you have the binding file, you just
+
+280
+00:23:27,039 --> 00:23:34,000
+simply drag into the creator. It will
+
+281
+00:23:30,080 --> 00:23:37,120
+automatically generate a wardrobe asset.
+
+282
+00:23:34,000 --> 00:23:40,120
+Click on it and assign it to your
+
+283
+00:23:37,120 --> 00:23:40,120
+character.
+
+284
+00:24:16,720 --> 00:24:19,520
+This workflow is long and experimental
+
+285
+00:24:18,701 --> 00:24:21,279
+[music]
+
+286
+00:24:19,520 --> 00:24:22,880
+but I hope it gave you the right
+
+287
+00:24:21,279 --> 00:24:25,520
+direction.
+
+288
+00:24:22,880 --> 00:24:28,640
+Take your time, keep practicing [music]
+
+289
+00:24:25,520 --> 00:24:30,799
+and try different tool as a method. If
+
+290
+00:24:28,640 --> 00:24:32,799
+you enjoyed the video, feel free to
+
+291
+00:24:30,799 --> 00:24:35,120
+subscribe and let me know in the
+
+292
+00:24:32,799 --> 00:24:38,679
+comments what you want to see next.
+
+293
+00:24:35,120 --> 00:24:38,679
+Thanks for watching.
